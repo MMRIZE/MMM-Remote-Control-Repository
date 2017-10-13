@@ -1,4 +1,4 @@
-# RepositoryForRC
+# MMM-Remote-Control-Repository
 Plugin for MMM-Remote-Control to update modules.json automatically
 
 This module update `modules.json` of `MMM-Remote-Control` automatically with https://github.com/MichMich/MagicMirror/wiki/MagicMirror%C2%B2-Modules
