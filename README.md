@@ -21,4 +21,6 @@ Nothing to do by yourself. Just after installation, when every MM is restarted, 
 This plugin doesn't anything without `MMM-Remote-Control`.
 
 ## Misc.
+- Updated `modules.json` will be affected from **NEXT** execution of MagicMirror.
+
 Thanks to @Jopyth for great module `MMM-Remote-Control`.
