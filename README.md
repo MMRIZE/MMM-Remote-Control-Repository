@@ -6,7 +6,7 @@ This module update `modules.json` of `MMM-Remote-Control` automatically with htt
 ## Install
 ```
 cd <your MagicMirror Directory>/modules
-git clone https://github.com/eouia/RepositoryForRC.git
+git clone https://github.com/eouia/MMM-Remote-Control-Repository
 ```
 
 ## Configuration
