@@ -9,7 +9,7 @@ const NodeHelper = require("node_helper")
 const path = require("path")
 const fs = require("fs")
 const https = require("https")
-const repository = "https://github.com/MichMich/MagicMirror/wiki/MagicMirror%C2%B2-Modules"
+const repository = "https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules"
 const moduleJson = "modules.json"
 
 module.exports = NodeHelper.create({
