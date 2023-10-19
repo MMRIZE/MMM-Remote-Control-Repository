@@ -1,24 +1,25 @@
-/* Magic Mirror
+/* MagicMirror²
  * Module: repository updater plugin for MMM-Remote-Control
  *
  * By eouia
  * MIT Licensed.
  */
 
-const NodeHelper = require("node_helper")
 const path = require("path")
 const fs = require("fs")
 const https = require("https")
+const NodeHelper = require("node_helper")
+
 const repository = "https://github.com/MichMich/MagicMirror/wiki/3rd-Party-Modules"
 const moduleJson = "modules.json"
 
 module.exports = NodeHelper.create({
 	start: function() {
-		//do nothing;
+		// do nothing
 	},
 
 	socketNotificationReceived: function(message, payload) {
-		if (message == "START") {
+		if (message === "START") {
 			this.readRepository()
 		}
 	},
@@ -41,7 +42,7 @@ module.exports = NodeHelper.create({
 						longname: result[2],
 						author: result[3],
 						desc: result[4],
-						id: result[3] + "/" + result[2],
+						id: `${result[3]}/${result[2]}`
 					}
 					modules.push(module)
 				}
@@ -49,14 +50,14 @@ module.exports = NodeHelper.create({
 				var jsonPath = path.resolve(__dirname, "../MMM-Remote-Control", moduleJson)
 				fs.writeFile(jsonPath, json, "utf8", function(err, data) {
 					if (err) {
-						console.log("[RCREPO] modules.json updating fail:" + err.message)
+						console.log(`[RCREPO] modules.json updating fail: ${err.message}`)
 					} else {
 						console.log("[RCREPO] modules.json is updated.")
 					}
 				})
 			})
 		}).on("error", function(e) {
-			console.log("[RCREPO] Repository reading error: " + e.message)
+			console.log(`[RCREPO] Repository reading error: ${e.message}`)
 		})
 	}
 })

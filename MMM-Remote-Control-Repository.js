@@ -1,4 +1,4 @@
-/* Magic Mirror
+/* MagicMirror²
  * Module: repository updater plugin for MMM-Remote-Control
  *
  * By eouia
@@ -11,14 +11,13 @@ Module.register("MMM-Remote-Control-Repository", {
 	},
 
 	notificationReceived: function(noti, payload, sender) {
-		if (noti == "DOM_OBJECTS_CREATED") {
+		if (noti === "DOM_OBJECTS_CREATED") {
 			var self = this
-			var modules = MM.getModules().enumerate(function(m){
-				if (m.name == "MMM-Remote-Control") {
+			var modules = MM.getModules().enumerate(function(m) {
+				if (m.name === "MMM-Remote-Control") {
 					self.sendSocketNotification("START")
 				}
 			})
 		}
 	}
-
 })
