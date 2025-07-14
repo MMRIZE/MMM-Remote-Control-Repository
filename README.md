@@ -1,3 +1,5 @@
+**Deprecation note:** This module is no longer necessary, as **MMM-Remote-Control** now updates the modules.json file itself.
+
 # MMM-Remote-Control-Repository
 
 Plugin for [MMM-Remote-Control](https://github.com/Jopyth/MMM-Remote-Control) to update `modules.json` automatically.
